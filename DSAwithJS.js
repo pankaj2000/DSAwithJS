@@ -37,21 +37,41 @@
 // ==============================
 
 // var anagram = function(a,b){
-//     if(a.length != b.length) return false;
+    // if(a.length != b.length) return false;
 
-//     let obj1 = {};
-//     let obj2 = {};
+    // let obj1 = {};
+    // let obj2 = {};
 
-//     for(var i = 0; i< a.length; i++){
-//         obj1[a[i]] = (obj1[a[i]] || 0) +1;
-//          obj2[b[i]] = (obj2[b[i]] || 0) +1;
-//     }
+    // for(var i = 0; i< a.length; i++){
+    //     obj1[a[i]] = (obj1[a[i]] || 0) +1;
+    //      obj2[b[i]] = (obj2[b[i]] || 0) +1;
+    // }
 
-//     for(const key in obj1){
-//         if(obj1[key] !== obj2[key]) return false;
-//     }
+    // for(const key in obj1){
+    //     if(obj1[key] !== obj2[key]) return false;
+    // }
 
-//     return true;
+    // return true;
 // }
 
 // console.log(anagram('pankaj','jknpak'))
+
+// ==============================
+// 📅 2026-05-14 — Two Sum
+// ==============================
+var twoSum = function(arr, target){
+    var obj ={}
+
+    for(var i = 0;i<arr.length;i++){
+        n = arr[i];
+
+       if (obj[target - n] !== undefined) {
+                return [obj[target - n], i];
+        }else{
+                obj[n] = i;
+                console.log(obj)
+        }
+    }
+}
+
+console.log(twoSum([2,3,4,5],8))
